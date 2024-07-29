@@ -22,8 +22,8 @@
         </header>
         <nav>
             <ul class="nav-links">
-                <li class="active"><a href="#">HOME</a></li>
-                <li><a href="#none">구매하기</a></li>
+                <li ><a href="#">HOME</a></li>
+                <li class="active"><a href="#none">구매하기</a></li>
                 <li><a href="#none">자주 묻는 질문</a></li>
             </ul>
         </nav>
@@ -32,12 +32,13 @@
                 <div class="highlight">국내유일 1일권 공유 서비스</div>
                 <h1>
                     매달부담되는 구독비용<br>
-                    필요한 만큼만 사용해보세요!
+                    필요한 만큼 사용해보세요
                 </h1>
                 <p>
                     넷플릭스 <strong>1일권부터 6일권</strong>까지.<br>
                     유튜브 프리미엄은 <strong>월3천원대.</strong><br>
-                    아까운 비용을 아껴보세요.
+                    <!-- 아까운 비용을 아껴보세요. -->
+                    하루쉐어에서 아껴보세요.
                 </p>
                 <div class="logo-images">
                     <img src="image/logo-netflix.png" alt="Netflix">
@@ -85,8 +86,8 @@
             <div class="header_line"></div>
             <img src="image/deco_circle.png" alt="배경이미지">
             <img src="image/phone.png" alt="핸드폰 일러스트">
-            <img src="image/alert-n.png" alt="넷플릭스 구매 톡알림">
-            <img src="image/alert-y.png" alt="유튜브 구매 톡알림">
+            <img class="alert" src="image/alert-n.png" alt="넷플릭스 구매 톡알림">
+            <img class="alert" src="image/alert-y.png" alt="유튜브 구매 톡알림">
         </section>
         <section id="section4">
             <h2>지금 바로 이용해보세요.</h2>
@@ -152,18 +153,22 @@
             </div>
             <p>
                 하루쉐어를 시작하고 <br>
-                원하는 만큼 시청해보세요.
+                컨텐츠를 즐겨보세요.
             </p>
+            
+            <hr>
             <button id="kakaoLoginBtn" class="kakao-login-button">
                 <img src="image/kakao.png" alt="Kakao Logo">
-                카카오 로그인
+                카카오로 시작하기
             </button>
-            <hr>
+            <!-- <hr>
+            <p>준비중..</p>
             <ul class="sns_login">
+
                 <li><a href="#none"><img src="image/naver-login.png" alt="네이버아이디로 로그인"></a></li>
                 <li><a href="#none"><img src="image/apple-login.png" alt="애플아이디로 로그인"></a></li>
                 <li><a href="#none"><img src="image/google-login.png" alt="구글아이디로 로그인"></a></li>
-            </ul>
+            </ul> -->
         </div>
     </div>
 
@@ -174,6 +179,53 @@
     <script src="js/jquery-migrate-1.4.1.min.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="js/index.js"></script>
+    <script>
+        
+        var userinfo = {
+            "pluginKey": "92e5c479-6d92-4839-8133-9daff6f3263e", //please fill with your plugin key
+        };
+        // Channel Plugin Scripts 
+        (function() {
+            var w = window;
+            if (w.ChannelIO) {
+                return (window.console.error || window.console.log || function(){})('ChannelIO script included twice.');
+            }
+            var ch = function() {
+                ch.c(arguments);
+            };
+            ch.q = [];
+            ch.c = function(args) {
+                ch.q.push(args);
+            };
+            w.ChannelIO = ch;
+            function l() {
+                if (w.ChannelIOInitialized) {
+                    return;
+                }
+                w.ChannelIOInitialized = true;
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
+                s.charset = 'UTF-8';
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            }
+            if (document.readyState === 'complete') {
+            l();
+            } else if (window.attachEvent) {
+            window.attachEvent('onload', l);
+            } else {
+            window.addEventListener('DOMContentLoaded', l, false);
+            window.addEventListener('load', l, false);
+            }
+        })();
+        
+        if (userinfo) {
+            ChannelIO('boot', userinfo);    
+        } 
+    </script>
+    
 </body>
 
 </html>

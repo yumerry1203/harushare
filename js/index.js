@@ -8,8 +8,9 @@ $(document).ready(function(){
             $('.sticky').css({"opacity":0});
         }
     });
-});
+    
 
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     var modal = document.getElementById("myModal");
@@ -117,9 +118,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
         let scroll = document.scrollingElement.scrollTop;
         let outHeight = this.window.outerHeight; 
-    
+
         for(let i =0; i<section.length;i++){
-        if(scroll > section[i].offsetTop - outHeight &&
+        if(scroll > section[i].offsetTop - outHeight + 200&&
             scroll < section[i].offsetTop - outHeight + section[i].offsetHeight){
             funcObj['f_'+i]();
         }
