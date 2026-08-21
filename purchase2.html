@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하루쉐어-구매하기</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="#">HARU SHARE</a>
+            </div>
+            <div class="auth-links">
+                <!-- <a href="#none" id="loginBtn">로그인 | 회원가입</a> --> <!-- 로그인 아닐 때 노출 -->
+                <div class="login"> <!-- 로그인 되면 노출 -->
+                    <a href="mypage1.html">마이페이지</a>
+                    <span>ㆍ</span>
+                    <a href="#none"><img src="image/ico-logout.png" alt="로그아웃 아이콘"></a>
+                </div>                
+            </div>
+        </header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li class="active"><a href="purchase1.html">구매하기</a></li>
+                <li><a href="qna.html">자주 묻는 질문</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div id="goods">
+                <h2>구매 상품</h2>
+                <div class="goods_card">
+                    <div class="pur_header">
+                        <div class="product_name">
+                            <p>넷플릭스 프리미엄</p>
+                            <p><img src="image/ticket_white.png" alt="티켓아이콘">1일권</p>
+                        </div>
+                        <img src="image/logo-netflix2.png" alt="넷플릭스 로고">
+                    </div>
+                    <div class="pur_breakdown">
+                        <ul>
+                            <li><span>이용날짜</span><span>24.07.24 ~ 24.07.26</span></li>
+                            <li><span>이용시간</span><span>07:25 ~ 11:59</span></li>
+                            <li><span>결제금액</span><span>1,500원</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="notice">
+                    <li>계좌 입금과 동시에 주문이 이루어지며, 주문과 동시에 기간이 소모되는 상품들이기 때문에 기본적으로 환불/반품/취소는 불가능 합니다.</li>
+                    <li>상품에 문제가 있어 구매한 상품 이용이 불가능하고, 이에 대한 AS가 불가능한 경우에 한하여 환불/반품/취소 가능합니다.</li>
+                </ul>
+            </div>
+            <div id="buyer_info">
+                <h2>구매자정보 <a href="#none">수정</a></h2>
+                <p class="blue_txt">*계정 정보는 카카오 알림톡으로 전달되므로 전화 번호 확인 부탁드립니다.</p>
+                <div class="info_card">
+                    <div><img src="image/ico-name.png" alt="사람아이콘"><span class="name">홍길동</span></div>
+                    <div><img src="image/ico-call.png" alt="전화아이콘"><span class="call">010-5555-7777</span></div>
+                    <div class="mail_list"><img src="image/ico-mail.png" alt="메일아이콘"><span class="mail">you@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div id="payment">
+                <h2>결제수단</h2>
+                <div class="radio_btn">
+                    <input type="radio" id="payment" name="payment"checked>
+                    <label for="payment">무통장 입금</label>
+                </div>
+                <select name="bank" id="bank">
+                    <option value="kakao">카카오뱅크 3333-31-1687474 권승빈</option>
+                    <option value="kb">국민은행 000-0000-0000 권승빈</option>
+                </select>
+                <input type="text" placeholder="입금자명 (미입력시 구매자명)">
+                <p class="blue_txt">*주문 후 1시간 동안 미입금시 자동 취소됩니다.</p>
+                <div class="check_btn">
+                    <input type="checkbox" id="check01">
+                    <label for="check01">입금자명이 다를 시 자동발송 제한이 있음을 인지합니다.</label>
+                </div>
+                <div class="check_btn">
+                    <input type="checkbox" id="check02">
+                    <label for="check02">현금영수증 신청</label>
+                </div>
+                <div class="receipt_area">
+                    <div class="radio_btn">
+                        <input type="radio" name="receipt" id="receipt" checked>
+                        <label for="receipt">소득공제용</label>
+                    </div>
+                    <input type="text" placeholder="휴대전화번호 입력">
+                </div>
+                <div class="check_btn agree">
+                    <input type="checkbox" id="check03">
+                    <label for="check03">전체동의</label>
+
+                    <div class="check_btn">
+                        <input type="checkbox" id="check04">
+                        <label for="check04">개인정보 수집 및 이용 동의</label>
+                    </div>
+                    <div class="check_btn">
+                        <input type="checkbox" id="check05">
+                        <label for="check05">구매조건 확인 및 결제진행에 동의</label>
+                    </div>
+                </div>               
+                <a href="purchase3.html" class="btn">결제하기</a>
+            </div>
+           
+        </section>
+
+        <!-- <footer>
+            <div class="logo">
+                <a href="#">HARU SHARE</a>
+            </div>
+            <address>
+                대표이사 : 권승빈<br>
+                주소 : ㅇㅇ시 ㅇㅇ구 ㅇㅇㅇ<br>
+                사업자 등록번호 : 000-00-000<br>
+            </address>
+            <ul class="corp_area">
+                <li><a href="#none">이용약관</a></li>
+                <li><a href="#none">개인정보처리방침</a></li>
+                <li><a href="#none">고객센터</a></li>
+                <li><a href="#none">자주묻는 질문</a></li>
+            </ul>
+            <p>Copyright &copy; 2024 하루쉐어</p>        
+        </footer> -->
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close"><a href="#none">&times;</a></span>
+            <div class="logo">
+                <a href="#">HARU SHARE</a>
+            </div>
+            <p>
+                하루쉐어를 시작하고 <br>
+                컨텐츠를 즐겨보세요.
+            </p>
+
+            <hr>
+            <button id="kakaoLoginBtn" class="kakao-login-button">
+                <img src="image/kakao.png" alt="Kakao Logo">
+                카카오로 시작하기
+            </button>
+            <!-- <hr>
+            <p>준비중..</p>
+            <ul class="sns_login">
+
+                <li><a href="#none"><img src="image/naver-login.png" alt="네이버아이디로 로그인"></a></li>
+                <li><a href="#none"><img src="image/apple-login.png" alt="애플아이디로 로그인"></a></li>
+                <li><a href="#none"><img src="image/google-login.png" alt="구글아이디로 로그인"></a></li>
+            </ul> -->
+        </div>
+    </div>
+
+
+    <!-- Script Source -->
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="js/jquery-migrate-1.4.1.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+
+        /* var userinfo = {
+            "pluginKey": "92e5c479-6d92-4839-8133-9daff6f3263e", //please fill with your plugin key
+        };
+        // Channel Plugin Scripts 
+        (function() {
+            var w = window;
+            if (w.ChannelIO) {
+                return (window.console.error || window.console.log || function(){})('ChannelIO script included twice.');
+            }
+            var ch = function() {
+                ch.c(arguments);
+            };
+            ch.q = [];
+            ch.c = function(args) {
+                ch.q.push(args);
+            };
+            w.ChannelIO = ch;
+            function l() {
+                if (w.ChannelIOInitialized) {
+                    return;
+                }
+                w.ChannelIOInitialized = true;
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
+                s.charset = 'UTF-8';
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            }
+            if (document.readyState === 'complete') {
+            l();
+            } else if (window.attachEvent) {
+            window.attachEvent('onload', l);
+            } else {
+            window.addEventListener('DOMContentLoaded', l, false);
+            window.addEventListener('load', l, false);
+            }
+        })();
+        
+        if (userinfo) {
+            ChannelIO('boot', userinfo);    
+        }  */
+    </script>
+
+</body>
+
+</html>

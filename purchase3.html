@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하루쉐어-구매하기</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="index.html">HARU SHARE</a>
+            </div>
+            <div class="auth-links">
+                <!-- <a href="#none" id="loginBtn">로그인 | 회원가입</a> --> <!-- 로그인 아닐 때 노출 -->
+                <div class="login"> <!-- 로그인 되면 노출 -->
+                    <a href="mypage1.html">마이페이지</a>
+                    <span>ㆍ</span>
+                    <a href="#none"><img src="image/ico-logout.png" alt="로그아웃 아이콘"></a>
+                </div>                
+            </div>
+        </header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li class="active"><a href="purchase1.html">구매하기</a></li>
+                <li><a href="qna.html">자주 묻는 질문</a></li>
+            </ul>
+        </nav>
+        <section id="order">
+            <div class="order_bg">
+                <div class="completed_card">
+                    <div class="contents">
+                        <img src="image/ico-check.png" alt="체크아이콘">
+                        <p>주문완료</p>
+                        <div>
+                            아래 계좌로 입금해주시면 결제 완료처리되며<br class="pc_only"> 동시에 카카오톡으로 상품이 발송됩니다. <br class="pc_only">구매해주셔서 감사합니다:&#41;
+                        </div>
+                    </div>
+                    <div class="details">
+                        <ul>
+                            <li><span>상품명</span><strong>넷플릭스 프리미엄 1일권</strong></li>
+                            <li><span>금액</span><strong>1,500원</strong></li>
+                            <li><span>입금자명<em>*가입한 것과 동일필수</em></span><strong>홍길동</strong></li>
+                            <li><span>입금기한</span><strong>24.07.25 15:28까지</strong></li>
+                        </ul> 
+                        <p class="bubble_talk"><span>!</span>기간내 미입금시 결제취소됩니다.</p>
+                    </div>
+                </div>
+            </div>
+                
+        </section>
+
+        <!-- <footer>
+            <div class="logo">
+                <a href="#">HARU SHARE</a>
+            </div>
+            <address>
+                대표이사 : 권승빈<br>
+                주소 : ㅇㅇ시 ㅇㅇ구 ㅇㅇㅇ<br>
+                사업자 등록번호 : 000-00-000<br>
+            </address>
+            <ul class="corp_area">
+                <li><a href="#none">이용약관</a></li>
+                <li><a href="#none">개인정보처리방침</a></li>
+                <li><a href="#none">고객센터</a></li>
+                <li><a href="#none">자주묻는 질문</a></li>
+            </ul>
+            <p>Copyright &copy; 2024 하루쉐어</p>        
+        </footer> -->
+    </div>   
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close"><a href="#none">&times;</a></span>
+            <div class="logo">
+                <a href="#">HARU SHARE</a>
+            </div>
+            <p>
+                하루쉐어를 시작하고 <br>
+                컨텐츠를 즐겨보세요.
+            </p>
+
+            <hr>
+            <button id="kakaoLoginBtn" class="kakao-login-button">
+                <img src="image/kakao.png" alt="Kakao Logo">
+                카카오로 시작하기
+            </button>
+            <!-- <hr>
+            <p>준비중..</p>
+            <ul class="sns_login">
+
+                <li><a href="#none"><img src="image/naver-login.png" alt="네이버아이디로 로그인"></a></li>
+                <li><a href="#none"><img src="image/apple-login.png" alt="애플아이디로 로그인"></a></li>
+                <li><a href="#none"><img src="image/google-login.png" alt="구글아이디로 로그인"></a></li>
+            </ul> -->
+        </div>
+    </div>
+
+
+    <!-- Script Source -->
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="js/jquery-migrate-1.4.1.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+
+        /* var userinfo = {
+            "pluginKey": "92e5c479-6d92-4839-8133-9daff6f3263e", //please fill with your plugin key
+        };
+        // Channel Plugin Scripts 
+        (function() {
+            var w = window;
+            if (w.ChannelIO) {
+                return (window.console.error || window.console.log || function(){})('ChannelIO script included twice.');
+            }
+            var ch = function() {
+                ch.c(arguments);
+            };
+            ch.q = [];
+            ch.c = function(args) {
+                ch.q.push(args);
+            };
+            w.ChannelIO = ch;
+            function l() {
+                if (w.ChannelIOInitialized) {
+                    return;
+                }
+                w.ChannelIOInitialized = true;
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
+                s.charset = 'UTF-8';
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            }
+            if (document.readyState === 'complete') {
+            l();
+            } else if (window.attachEvent) {
+            window.attachEvent('onload', l);
+            } else {
+            window.addEventListener('DOMContentLoaded', l, false);
+            window.addEventListener('load', l, false);
+            }
+        })();
+        
+        if (userinfo) {
+            ChannelIO('boot', userinfo);    
+        }  */
+    </script>
+
+</body>
+
+</html>
